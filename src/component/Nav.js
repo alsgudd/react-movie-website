@@ -1,5 +1,6 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
+import styles from '../style.css';
 
 function Nav() {
   const nav_title = {
@@ -17,7 +18,7 @@ function Nav() {
 
   
   return (
-    <Navbar className='p-3'>
+    <Navbar className='p-3 mb-5'>
       <Container>
         <Navbar.Brand href="/" style={nav_title}>MAXBOX</Navbar.Brand>
         <Navbar.Toggle />
