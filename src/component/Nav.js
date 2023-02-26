@@ -14,6 +14,8 @@ function Nav() {
     display: "flex",
     listStyle: "none",
   }
+
+  
   return (
     <Navbar className='p-3'>
       <Container>
