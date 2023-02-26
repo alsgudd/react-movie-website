@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 import Movie from '../component/Movie.js'
+import '../style.css';
 
 function Home() {
     const [loading, setLoading] = useState(true);
@@ -21,13 +23,20 @@ function Home() {
             {
                 loading ?
                     <h1>Loading...</h1> :
-                    <div>{movies.map((movie, i) => <Movie
-                        movie={movies[i]}
-                        key={movie.id} />)}
-                    </div>
+                    <Container>
+                        <Row>
+                            {
+                                movies.map((movie, i) => <Movie
+                                    movie={movies[i]}
+                                    key={movie.id} />)
+                            }
+                        </Row> 
+                    </Container>
             }
         </div>
     );
 }
+
+
 
 export default Home;

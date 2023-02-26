@@ -1,14 +1,17 @@
 import { Routes, Route, Link } from 'react-router-dom'
 import Home from './routes/Home';
-import './App.css';
+import './style.css';
 import Detail from './routes/Detail';
+import Nav from './component/Nav.js';
 
 function App() {
   return (
-    <Routes>
-      <Route path='/movie/:id' element={ <Detail/> }/>
-      <Route path='/' element={ <Home /> }/>
-    </Routes>
+    <>
+      <Nav />
+      <Routes>
+        <Route path='/movie/:id' element={<Detail />} />
+        <Route path='/' element={<Home />} />
+      </Routes></>
   )
 }
 

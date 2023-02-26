@@ -1,8 +1,12 @@
+import { Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function Movie(props) {
+    if(props.movie.medium_cover_image == "") {
+        return null;
+    }
     return (
-        <div>
+        <Col sm={6}>
             <img src={ props.movie.medium_cover_image } alt="Movie Cover Image"/>
             <h2>
                 <Link to={ `/movie/${props.movie.id}` }>{ props.movie.title }</Link>
@@ -15,7 +19,7 @@ function Movie(props) {
                     )
                 })}
             </ul>
-        </div>
+        </Col>
     )
 }
 

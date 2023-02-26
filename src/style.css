@@ -1,0 +1,23 @@
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.nav_title {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.nav_icon {
+  font-size: 24px;
+  padding: 4px 8px;
+}
+
+.nav_icon_container {
+  display: flex;
+  list-style: none;
+}
+
+.App {
+  text-align: center;
+}
+
