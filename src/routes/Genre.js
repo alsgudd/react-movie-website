@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { useParams } from 'react-router-dom';
 import Movie from '../component/Movie.js'
 import '../style.css';
 
-function Home() {
+function Genre() {
+    const genre = useParams();
     const [loading, setLoading] = useState(true);
     const [movies, setMovies] = useState([]);
     const getMovies = async () => {
         const response = await fetch(
-            `https://yts.mx/api/v2/list_movies.json?limit=50&sort_by=year&minimum_rating=8`
+            `https://yts.mx/api/v2/list_movies.json?genre=${genre.id}&minimum_rating=8`
         );
         const json = await response.json();
         setMovies(json.data.movies);
@@ -18,6 +20,8 @@ function Home() {
         getMovies();
     }, [])
 
+    console.log(movies);
+    console.log(genre);
     return (
         <div>
             {
@@ -39,4 +43,4 @@ function Home() {
 
 
 
-export default Home;
+export default Genre;

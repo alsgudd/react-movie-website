@@ -2,6 +2,7 @@ import { Routes, Route, Link } from 'react-router-dom'
 import Home from './routes/Home';
 import './style.css';
 import Detail from './routes/Detail';
+import Genre from './routes/Genre';
 import Nav from './component/Nav.js';
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
       <Nav />
       <Routes>
         <Route path='/movie/:id' element={<Detail />} />
-        <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />} />
+        <Route path='/React-movie' element={<Home />} />
+        <Route path='/genre/:id' element={<Genre />} />
       </Routes></>
   )
 }

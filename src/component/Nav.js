@@ -1,38 +1,27 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
-import styles from '../style.css';
+import styles from "./Nav.module.css";
 
 function Nav() {
-  const nav_title = {
-    fontWeight: "700",
-    fontSize: "30px",
-  }
-  const nav_icon = {
-    fontSize: "24px",
-    padding: "4px 8px",
-  }
-  const nav_icon_container = {
-    display: "flex",
-    listStyle: "none",
-  }
-
-  
   return (
     <Navbar className='p-3 mb-5'>
       <Container>
-        <Navbar.Brand href="/" style={nav_title}>MAXBOX</Navbar.Brand>
-        <Navbar.Toggle />
+        <Navbar.Brand href="/React-movie" className={styles.nav_title}>MAXBOX</Navbar.Brand>
+        <div style={{ marginLeft: '10px' }}>
+          <Navbar.Brand href="/genre/romance" className={styles.nav_list}>Romance</Navbar.Brand>
+          <Navbar.Brand href="/genre/action" className={styles.nav_list}>Action</Navbar.Brand>
+          <Navbar.Brand href="/genre/thriller" className={styles.nav_list}>Thriller</Navbar.Brand>
+        </div>
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
             Designed by: <a href="https://github.com/alsgudd">MinHyung Lee</a>
           </Navbar.Text>
-        </Navbar.Collapse>
-        <div style={{marginTop: "4px"} }>
-          <ul style={nav_icon_container}>
-            <li style={nav_icon}><a href="https://twitter.com/?lang=ko" target="_blank"><i className="fab fa-twitter-square"></i></a></li>
-            <li style={nav_icon}><a href="https://www.instagram.com/" target="_blank"><i className="fab fa-instagram"></i></a></li>
+          <ul className={styles.nav_icon_container}>
+            <li className={styles.nav_icon}><a href="https://twitter.com/?lang=ko" target="_blank"><i className="fab fa-twitter-square"></i></a></li>
+            <li className={styles.nav_icon}><a href="https://www.instagram.com/" target="_blank"><i className="fab fa-instagram"></i></a></li>
           </ul>
-        </div>
+        </Navbar.Collapse>
+
       </Container>
     </Navbar>
   );
