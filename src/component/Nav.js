@@ -4,7 +4,7 @@ import styles from "./Nav.module.css";
 
 function Nav() {
   return (
-    <Navbar className='p-3 mb-5'>
+    <Navbar className='p-3'>
       <Container>
         <Navbar.Brand href="/React-movie" className={styles.nav_title}>MAXBOX</Navbar.Brand>
         <div style={{ marginLeft: '10px' }}>

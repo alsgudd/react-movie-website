@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col } from 'react-bootstrap';
 import { useParams } from "react-router-dom";
+import Loading from "../component/Loading";
 import styles from "./Detail.module.css";
 
 function Detail() {
@@ -24,8 +25,8 @@ function Detail() {
         <div>
             {
                 loading ?
-                    <h1>Loading...</h1> :
-                    <Container>
+                    <Loading /> :
+                    <Container className="mt-5">
                         <Row>
                             <Col lg={6}>
                                 <img className={styles.detail__img} src={datas.large_cover_image} />

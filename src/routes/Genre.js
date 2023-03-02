@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import Movie from '../component/Movie.js'
+import Loading from '../component/Loading.js';
 import '../style.css';
 
 function Genre() {
@@ -26,7 +27,7 @@ function Genre() {
         <div>
             {
                 loading ?
-                    <h1>Loading...</h1> :
+                    <Loading /> :
                     <Container>
                         <Row>
                             {
