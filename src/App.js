@@ -11,7 +11,7 @@ function App() {
       <Nav />
       <Routes>
         <Route path='/movie/:id' element={<Detail />} />
-        <Route path='/React-movie' element={<Home />} />
+        <Route path='/react-movie-website' element={<Home />} />
         <Route path='/genre/:id' element={<Genre />} />
       </Routes></>
   )

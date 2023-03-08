@@ -1,5 +1,5 @@
 {
-  "name": "react-blog",
+  "name": "react-movie-website",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -45,5 +45,5 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://alsgudd.github.io/React-movie/"
+  "homepage": "https://alsgudd.github.io/react-movie-website/"
 }

@@ -6,7 +6,7 @@ function Nav() {
   return (
     <Navbar className='p-3'>
       <Container>
-        <Navbar.Brand href="/React-movie" className={styles.nav_title}>MAXBOX</Navbar.Brand>
+        <Navbar.Brand href="/react-movie-website" className={styles.nav_title}>MAXBOX</Navbar.Brand>
         <div style={{ marginLeft: '10px' }}>
           <Navbar.Brand href="/genre/romance" className={styles.nav_list}>Romance</Navbar.Brand>
           <Navbar.Brand href="/genre/action" className={styles.nav_list}>Action</Navbar.Brand>
