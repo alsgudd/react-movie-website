@@ -1,16 +1,18 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import styles from "./Nav.module.css";
+import { useNavigate } from 'react-router-dom';
 
 function Nav() {
+  const navigate = useNavigate();
   return (
     <Navbar className='p-3'>
       <Container>
-        <Navbar.Brand href="/react-movie-website" className={styles.nav_title}>MAXBOX</Navbar.Brand>
+        <Navbar.Brand onClick={() => {navigate('/react-movie-website')}} className={styles.nav_title}>MAXBOX</Navbar.Brand>
         <div style={{ marginLeft: '10px' }}>
-          <Navbar.Brand href="/genre/romance" className={styles.nav_list}>Romance</Navbar.Brand>
-          <Navbar.Brand href="/genre/action" className={styles.nav_list}>Action</Navbar.Brand>
-          <Navbar.Brand href="/genre/thriller" className={styles.nav_list}>Thriller</Navbar.Brand>
+          <Navbar.Brand  onClick={() => {navigate('/genre/romance')}} className={styles.nav_list}>Romance</Navbar.Brand>
+          <Navbar.Brand onClick={() => {navigate('/genre/action')}} className={styles.nav_list}>Action</Navbar.Brand>
+          <Navbar.Brand onClick={() => {navigate('/genre/thriller')}} className={styles.nav_list}>Thriller</Navbar.Brand>
         </div>
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>

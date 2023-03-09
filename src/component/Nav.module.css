@@ -1,6 +1,7 @@
 .nav_title {
     font-weight: 900;
     font-size: 50px;
+    cursor: pointer;
   }
 .nav_icon {
     font-size: 24px;
@@ -13,4 +14,5 @@
 .nav_list {
     font-size: 20px;
     margin-left: 5px;
+    cursor: pointer;
 }
